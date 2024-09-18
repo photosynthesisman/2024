@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하이유엑스컨설팅(구:타란유엑스컨설팅</title>
+    <meta name="description" content="하이UX컨설팅(주) - 하이유엑스컨설팅(구:타란유엑스컨설팅), HI UX. 우리는 성공적인 비지니스 전략을 제시해 나가는 것을 목표로 합니다." />
+    <link rel="canonical" href="http://hiuxc.com" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="하이유엑스컨설팅(구:타란유엑스컨설팅)" />
+    <meta property="og:description" content="하이유엑스컨설팅(구:타란유엑스컨설팅), HI UX. 우리는 성공적인 비지니스 전략을 제시해 나가는 것을 목표로 합니다." />
+    <meta property="og:url" content="http://hiuxc.com" />
+    <meta property="og:site_name" content="하이유엑스컨설팅(구:타란유엑스컨설팅)" />
+    <meta property="og:image" content="/images/ogp_image.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/images/favicon/touch-icon-ipad-retina.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .mainBanner .swiper-slide img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      .menu {
+        min-width: 0;
+        width: 100%;
+        height: calc(100% - 10rem);
+        background-color: transparent;
+        border-top: 0.1rem solid #000;
+        color: #000;
+        flex-direction: column;
+        transition-delay: 600ms;
+        transition-duration: 300ms;
+      }
+
+      .content {
+        width: 100%;
+        height: 100%;
+        transition-delay: 600ms;
+        transition-duration: 300ms;
+      }
+      .content.swiper-slide-prev {
+        bottom: -10rem;
+      }
+      .menu.swiper-slide-active {
+        bottom: -10rem;
+      }
+      .content .swiper-slide {
+        height: 100%;
+      }
+
+      .menu-button {
+        position: absolute;
+        top: -6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1.5rem;
+
+        cursor: pointer;
+
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+
+        background-color: #2c8dfb;
+
+        /*margin: 14px;
+        border-radius: 5px;*/
+      }
+      .work-cate h5 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      .workSlider .swiper-slide {
+        width: 30rem;
+        padding: 0 1rem;
+      }
+      .workSlider .swiper-slide .img-wrap {
+        display: block;
+        width: 100%;
+        height: 15rem;
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LGNH7558W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-5LGNH7558W');
+    </script>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="main swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide content">
+          <div class="mainBanner swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://source.unsplash.com/random/300×200" alt="더미이미지" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://source.unsplash.com/random/200×200" alt="더미이미지" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide menu">
+          <button type="button" class="menu-button">상세 메뉴</button>
+          <div style="overflow-y: auto; height: 100%; padding-bottom: 10rem; box-sizing: border-box; width: 100%">
+            <div>
+              <div class="work-cate">
+                <h5>Banking</h5>
+                <div class="swiper workSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="work-cate">
+                <h5>STOCK</h5>
+                <div class="swiper workSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="work-cate">
+                <h5>insurance</h5>
+                <div class="swiper workSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                    <div class="swiper-slide">
+                      <span class="img-wrap">
+                        <img src="https://source.unsplash.com/random/100×100" alt="더미이미지" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      const mainBanner = new Swiper('.mainBanner', {
+        loop: true
+        // autoplay: {
+        //   delay: 5000
+        // }
+      });
+
+      const menuButton = document.querySelector('.menu-button');
+      const openMenu = function () {
+        main.slidePrev();
+      };
+
+      const workSlider = new Swiper('.workSlider', {
+        slidesPerView: 'auto'
+      });
+
+      const main = new Swiper('.main', {
+        slidesPerView: 'auto',
+        autoHeight: true,
+        direction: 'vertical',
+        mousewheel: true,
+        initialSlide: 0,
+        resistanceRatio: 0,
+        slideToClickedSlide: true,
+        on: {
+          slideChangeTransitionStart: function () {
+            const main = this;
+            if (main.activeIndex === 0) {
+              menuButton.classList.add('menuActive');
+              // required because of slideToClickedSlide
+              menuButton.removeEventListener('click', openMenu, true);
+            } else {
+              menuButton.classList.remove('menuActive');
+            }
+          },
+          slideChangeTransitionEnd: function () {
+            const main = this;
+            if (main.activeIndex === 1) {
+              menuButton.addEventListener('click', openMenu, true);
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

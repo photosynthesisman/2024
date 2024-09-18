@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+    <title>하이유엑스컨설팅(하이UX컨설팅)</title>
+    <meta name="description" content="하이UX컨설팅 - (주)하이유엑스컨설팅(구:타란유엑스컨설팅), HI UX. 우리는 성공적인 비지니스 전략을 제시해 나가는 것을 목표로 합니다." />
+    <link rel="canonical" href="http://hiuxc.com" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="하이UX컨설팅 - (주)하이유엑스컨설팅(구:타란유엑스컨설팅)" />
+    <meta property="og:description" content="하이UX컨설팅 (주)하이유엑스컨설팅(구:타란유엑스컨설팅), HI UX. 우리는 성공적인 비지니스 전략을 제시해 나가는 것을 목표로 합니다." />
+    <meta property="og:url" content="http://hiuxc.com" />
+    <meta property="og:site_name" content="하이UX컨설팅 (주)하이유엑스컨설팅(구:타란유엑스컨설팅)" />
+    <meta property="og:image" content="./static/img/ogp_image.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="./static/img/favicon/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./static/img/favicon/favicon.png" />
+
+    <meta name="apple-mobile-web-app-title" content="하이유엑스컨설팅" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="./static/img/favicon/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./static/img/favicon/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/img/favicon/touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="./static/img/favicon/touch-icon-ipad-retina.png" />
+    <link rel="manifest" href="./static/css/manifest.json" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./static/css/front.min.css" />
+    <link rel="stylesheet" href="./static/css/default.min.css" />
+    <link rel="stylesheet" href="./static/css/custom.min.css" />
+    <style>
+      .html-list {
+        border-bottom: 0.1rem solid #72727248;
+      }
+      .html-list a {
+        color: #186ce9;
+        text-decoration: underline;
+      }
+      .html-list .depth-1 {
+        border-top: 2px #72727248 solid;
+      }
+      .current-worked {
+        color: red;
+      }
+      .current-worked.completed {
+        color: green;
+      }
+      /* 모바일 */
+      @media only screen and (max-width: 768px) {
+        .html-list thead th,
+        .html-list tbody th,
+        .html-list tbody td {
+          padding: 1rem;
+          font-size: 1.2rem;
+        }
+        .html-list .etc,
+        .html-list .depth-2 {
+          display: none;
+        }
+        .html-list th:last-child,
+        .html-list td:last-child {
+          font-size: 0;
+        }
+        .html-list td.current-worked::before {
+          content: '△';
+          font-size: 1rem;
+        }
+        .html-list .current-worked.completed::before {
+          content: '○';
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5LGNH7558W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-5LGNH7558W');
+    </script>
+  </head>
+  <body>
+    <!-- js -->
+    <script src="./static/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="./static/js/lib/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./static/js/lib/swiper-bundle.11.0.5.min.js"></script>
+
+    <div id="wrapper" class="">
+      <div class="contents-area" id="container">
+        <!-- header -->
+        <script class="__include" src="./html/include/header.js"></script>
+        <!-- contents -->
+        <div class="container">
+          <div class="inner">
+            <h4 class="flex align-center space-between mb-10">
+              <strong class="">HTML 목록</strong>
+              <span class="ml-auto">화면 개수 : <span class="page-length"></span></span>
+            </h4>
+            <table class="table html-list" style="border-bottom: 2px #72727248 solid">
+              <thead>
+                <tr>
+                  <th>1 depth</th>
+                  <th class="depth-2">2 depth</th>
+                  <th>화면 HTML 명</th>
+                  <th>작업자</th>
+                  <th class="etc">비고</th>
+                  <th>진행상황</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="depth-1">
+                  <th class="t-center">Main</th>
+                  <td class="depth-2">메인 페이지</td>
+                  <td><a href="/" target="_blank" title="새창열림">index.html</a></td>
+                  <td>박은교</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr>
+                <tr class="depth-1">
+                  <th rowspan="1" class="t-center">Work</th>
+                  <td class="depth-2">Work list</td>
+                  <td><a href="work.html" target="_blank" title="새창열림">work.html</a></td>
+                  <td>변상우</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr>
+                <!-- <tr>
+                  <td class="depth-2">view - KB 스타뱅킹</td>
+                  <td><a href="./html/work_kbapp_page.html" target="_blank" title="새창열림">work_kbapp_page.html</a></td>
+                  <td>박은교</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr>
+                <tr>
+                  <td class="depth-2">view - 교보 끌</td>
+                  <td><a href="./html/work_kbkkl_page.html" target="_blank" title="새창열림">work_kbkkl_page.html</a></td>
+                  <td>박은교</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr>
+                <tr>
+                  <td class="depth-2">view - 마블링</td>
+                  <td><a href="./html/work_kbkkl_page.html" target="_blank" title="새창열림">work_marbling_page.html</a></td>
+                  <td>박은교</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr> -->
+                <tr class="depth-1">
+                  <th class="t-center">About</th>
+                  <td class="depth-2">About</td>
+                  <td><a href="about.html" target="_blank" title="새창열림">about.html</a></td>
+                  <td>최재석</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr>
+                <tr class="depth-1">
+                  <th class="t-center">Contact</th>
+                  <td class="depth-2">Contact</td>
+                  <td><a href="contact.html" target="_blank" title="새창열림">contact.html</a></td>
+                  <td>최재석</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr>
+                <tr class="depth-1">
+                  <th rowspan="1" class="t-center">News</th>
+                  <td class="depth-2">News list</td>
+                  <td><a href="news.html" target="_blank" title="새창열림">news.html</a></td>
+                  <td>변상우</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr>
+                <!-- <tr>
+                  <td class="depth-2">view</td>
+                  <td><a href="./html/news_view.html" target="_blank" title="새창열림">news_view.html</a></td>
+                  <td>박은교</td>
+                  <td class="etc"></td>
+                  <td class="current-worked">완료</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <script class="__include" src="./html/include/footer.js"></script>
+        <!-- footer end -->
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="./static/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="./static/js/lib/jquery-migrate-3.4.0.min.js"></script>
+    <script src="./static/js/ui-common.js"></script>
+    <script>
+      const table = document.querySelector('.table');
+      const aTags = table.getElementsByTagName('a');
+      const pageLengthSpan = document.querySelector('.page-length');
+      const tdList = table.getElementsByTagName('td');
+
+      let count = 0;
+      for (let i = 0; i < aTags.length; i++) {
+        count++;
+      }
+      // 총 페이지수
+      pageLengthSpan.textContent = count;
+
+      for (var i = 0; i < tdList.length; i++) {
+        let td = tdList[i];
+        // 완료 텍스트가 들어가면 completed 클래스 추가
+        if (td.classList.contains('current-worked') && td.textContent.trim() === '완료') {
+          td.classList.add('completed');
+        }
+      }
+    </script>
+  </body>
+</html>

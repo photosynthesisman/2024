@@ -1,0 +1,467 @@
+@use 'sass:math';
+@import '../base/function', '../base/variables';
+/* 끌(KKl) 전용 */
+
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+/* 모바일 */
+@media only screen and (min-width: 600px) {
+}
+
+/* 테블릿 */
+@media only screen and (min-width: 1025px) {
+  .detail-area {
+    &.-kkl {
+      .detail-cell {
+        padding-top: -vw(240);
+      }
+      .-con1 {
+        height: -vw(1957);
+        background: url(../img/work/kkl/bg-kkl-detail-veiw01.png) no-repeat 0 0 / cover;
+        text-align: center;
+        color: $white-color;
+        font-weight: 700;
+        font-size: 8rem;
+        line-height: 10rem;
+        .device-image {
+          position: relative;
+          width: -vw(514);
+          height: -vw(1057);
+          margin: 0 auto;
+          margin-top: -vw(120);
+          .device-image-inner {
+            width: 100%;
+            height: 100%;
+            padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+            border-radius: -vw(100);
+            overflow: hidden;
+          }
+          img {
+            width: 100%;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../img/work/kbapp/img-phone-apperance.png) no-repeat 0 0 / cover;
+            z-index: 10;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: 95%;
+            height: 100%;
+            border-radius: -vw(80);
+            transform: translate(-50%);
+            box-shadow: 2.1rem 2rem 6.4rem 0 #00000066, 8.5rem 7.9rem 11.6rem 0 #00000017, 19rem 17.8rem 15.6rem 0 #0000000d, 33.8rem 31.7rem 18.5rem 0 #00000003, 52.9rem 49.5rem 20.3rem 0 #00000000;
+            z-index: 8;
+          }
+        }
+      }
+      .-con2 {
+        position: relative;
+        height: -vw(2274);
+        color: $white-color;
+        background-color: #161618;
+        .bg-illust {
+          position: absolute;
+          bottom: 0;
+          img {
+            height: -vw(168);
+          }
+        }
+        .device-image {
+          height: -vw(1494);
+          .device-image-inner {
+            display: flex;
+            justify-content: center;
+            padding: -vw(30);
+            height: 100%;
+          }
+          img {
+            height: -vw(1004);
+            &:first-child {
+              align-self: flex-end;
+            }
+            &:nth-child(2) {
+              align-self: center;
+            }
+            &:last-child {
+              align-self: flex-start;
+            }
+          }
+        }
+      }
+      .-con3 {
+        position: relative;
+        height: -vw(1776);
+        color: $white-color;
+        background-color: #161618;
+        margin-top: -1px;
+        .device-image {
+          margin-top: -vw(120);
+          img {
+            width: -vw(461);
+            height: -vw(936);
+          }
+        }
+        .card-image {
+          position: absolute;
+          top: -vw(914);
+          left: 50%;
+          transform: translateX(-50%);
+          width: -vw(1381);
+          display: flex;
+          justify-content: space-between;
+          img {
+            width: -vw(399);
+            height: -vw(317);
+          }
+        }
+      }
+      .-con4 {
+        position: relative;
+        height: -vw(3816);
+        padding-top: -vw(495);
+        .bg-illust {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          img {
+            height: -vw(195);
+            position: absolute;
+            &.top {
+              top: -vw(120);
+              left: 0;
+            }
+            &.bottom {
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+        .device-image {
+          margin-top: -vw(120);
+        }
+        .device-image-inner {
+          position: relative;
+          width: -vw(900);
+          height: 100%;
+          margin: 0 auto;
+        }
+        .detail {
+          &:nth-of-type(2) {
+            img {
+              width: -vw(550);
+            }
+            .device-image-inner {
+              &::before {
+                content: '';
+                position: absolute;
+                left: -vw(-330);
+                top: -vw(-50);
+                display: block;
+                width: -vw(1109);
+                height: -vw(963);
+                background: url(../img/work/kkl/bg-kkl-contents03-illust-left01.png) no-repeat 0 0 / cover;
+              }
+              &::after {
+                content: '';
+                position: absolute;
+                top: -vw(160);
+                right: -vw(-380);
+                display: block;
+                width: -vw(731);
+                height: -vw(1051);
+                background: url(../img/work/kkl/bg-kkl-contents03-illust-right01.png) no-repeat 0 0 / cover;
+                z-index: -1;
+              }
+            }
+          }
+          &:nth-of-type(3) {
+            padding-top: -vw(200);
+            img {
+              position: absolute;
+              width: -vw(490);
+              &:first-child {
+                left: 0;
+              }
+              &:nth-child(2) {
+                right: 0;
+              }
+            }
+            .device-image-inner {
+              &::before {
+                content: '';
+                position: absolute;
+                left: -vw(-300);
+                top: -vw(-50);
+                display: block;
+                width: -vw(433);
+                height: -vw(1313);
+                background: url(../img/work/kkl/bg-kkl-contents03-illust-left02.png) no-repeat 0 0 / cover;
+                z-index: -1;
+              }
+              &::after {
+                content: '';
+                position: absolute;
+                top: -vw(120);
+                right: -vw(-110);
+                display: block;
+                width: -vw(290);
+                height: -vw(381);
+                background: url(../img/work/kkl/bg-kkl-contents03-illust-right02.png) no-repeat 0 0 / cover;
+              }
+            }
+          }
+        }
+      }
+      .-con5 {
+        position: relative;
+        height: -vw(4152);
+        padding: -vw(437) 0;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          display: block;
+          height: -vw(437);
+          width: 100%;
+          background: rgb(222, 241, 241);
+          background: linear-gradient(180deg, rgba(222, 241, 241, 0) 0%, rgba(222, 241, 241, 1) 100%);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          display: block;
+          height: -vw(437);
+          width: 100%;
+          background: rgb(222, 241, 241);
+          background: linear-gradient(180deg, rgba(222, 241, 241, 1) 0%, rgba(243, 245, 246, 1) 100%);
+        }
+        .detail-inner {
+          height: 100%;
+          padding-top: -vw(180);
+          background: rgb(222, 241, 241);
+        }
+        .bg-illust {
+          position: absolute;
+          top: -vw(1244);
+          img {
+            height: -vw(146);
+          }
+        }
+        .device-image {
+          position: relative;
+          width: 100%;
+          height: -vw(2625);
+          margin-top: -vw(120);
+          .device-image-inner {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: -vw(490);
+            height: 100%;
+          }
+          img {
+            position: absolute;
+            width: -vw(490);
+            &:first-child {
+              left: -vw(-410);
+              top: -vw(600);
+            }
+            &:nth-child(2) {
+              left: 0;
+              top: 0;
+            }
+            &:last-child {
+              right: -vw(-410);
+              top: -vw(600);
+            }
+          }
+        }
+      }
+      .-con6 {
+        height: 510.7rem;
+        background-color: #f3f5f6;
+        .device-image {
+          margin-top: -vw(120);
+          .device-image-inner {
+            position: relative;
+            width: 45rem;
+            height: 91.7rem;
+            margin: 0 auto;
+            &::after {
+              content: '';
+              position: absolute;
+              left: 2%;
+              top: 0;
+              display: block;
+              width: 95%;
+              height: 100%;
+              border-radius: 8rem;
+              box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.04), 2.1rem 2rem 6.4rem rgba(0, 0, 0, 0.4), 8.5rem 7.9rem 11.6rem rgba(0, 0, 0, 0.09);
+              z-index: 2;
+            }
+          }
+          img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+          }
+        }
+        .point-txt {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+          > * {
+            flex-shrink: 0;
+          }
+          &.no1 {
+            top: 59rem;
+            right: 48.1rem;
+            z-index: 5;
+            .point {
+              width: -vw(180);
+            }
+          }
+          &.no2 {
+            top: 43.2rem;
+            left: 36.8rem;
+            .point {
+              width: -vw(160);
+            }
+          }
+          &.no3 {
+            top: 93.4rem;
+            right: 49.8rem;
+            .point {
+              width: -vw(164);
+            }
+          }
+          &.no4 {
+            top: 223.1rem;
+            left: 26.2rem;
+            .point {
+              width: -vw(266);
+            }
+          }
+          .point {
+            position: relative;
+            height: 0.2rem;
+            min-width: 3rem;
+            background-color: #fd7e64;
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: -0.4rem;
+              display: inline-block;
+              width: 1rem;
+              height: 1rem;
+              background-color: #fd7e64;
+              border-radius: 50%;
+            }
+          }
+          p {
+            font-weight: 700;
+            font-size: max(2.5rem, -vw(25));
+            line-height: max(3.2rem, -vw(32));
+            text-align: left;
+            + .point {
+              &::after {
+                left: auto;
+                right: -1rem;
+              }
+            }
+          }
+        }
+        .scroll-contents {
+          width: 100%;
+          .scroll-contents-inner {
+            position: relative;
+            top: -3rem;
+            width: 40rem;
+            height: 327.8rem;
+            margin: 0 auto;
+            background: url(../img/work/kkl/img-kkl-contents05-divice-scroll.png) no-repeat 0 0 / cover;
+          }
+        }
+        .card-contents-box {
+          position: absolute;
+          height: 37.5rem;
+          img {
+            height: 100%;
+          }
+          &.no1 {
+            top: 58.3rem;
+            right: -35rem;
+          }
+          &.no2 {
+            bottom: 52.5rem;
+            right: -27rem;
+          }
+          &.no3 {
+            bottom: -0.3rem;
+            right: -45rem;
+          }
+        }
+      }
+      .-con7 {
+        height: -vw(2092);
+        background-color: #16c2c2;
+        .device-image {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          .device-image-inner {
+            padding-left: 14.5rem;
+          }
+          img {
+            width: -vw(2107);
+            &:nth-child(2) {
+              margin-top: -vw(50);
+              margin-left: -vw(100);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* pc */
+@media only screen and (min-width: 1280px) {
+  .detail-area {
+    &.-kkl {
+      .-con6 {
+        .point-txt {
+          gap: 2.6rem;
+          p {
+            font-size: max(4rem, -vw(40));
+            line-height: max(5.2rem, -vw(52));
+          }
+          &.no1 {
+            top: 57rem;
+            right: 57.1rem;
+          }
+        }
+      }
+    }
+  }
+}

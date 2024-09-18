@@ -1,0 +1,375 @@
+@use 'sass:math';
+@import '../base/function', '../base/variables';
+/* KB 스타뱅킹 전용 */
+
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+/* 모바일 */
+@media only screen and (min-width: 600px) {
+}
+
+/* 테블릿 */
+@media only screen and (min-width: 1025px) {
+  .detail-area {
+    &.-kbapp {
+      .-con1 {
+        position: relative;
+        height: -vw(1514);
+        padding: 0;
+        background: url(../img/work/kbapp/bg-kbapp-detail-veiw01.png) no-repeat center center / cover;
+        font-size: 6rem;
+        font-weight: 800;
+        text-align: left;
+        line-height: 8rem;
+        .txt-point {
+          color: #7f599b;
+        }
+        .bg-illust {
+          position: absolute;
+          bottom: 20rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          padding-left: -vw(100);
+          display: flex;
+          align-items: baseline;
+          justify-content: center;
+          img {
+            &:first-child {
+              height: -vw(222);
+            }
+            &:last-child {
+              height: -vw(127);
+              margin-left: -vw(780);
+            }
+          }
+        }
+        .detail-inner {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: -vw(200);
+          p {
+            align-self: flex-start;
+            margin-top: 42rem;
+          }
+        }
+        .device-image {
+          position: relative;
+          width: -vw(450);
+          height: -vw(917);
+          .device-image-inner {
+            width: 100%;
+            height: 100%;
+            padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+            overflow: hidden;
+          }
+          img {
+            width: 100%;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../img/work/kbapp/img-phone-apperance.png) no-repeat 0 0 / cover;
+            z-index: 10;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: calc(100% - 0.8rem);
+            height: 100%;
+            border-radius: 7rem;
+            transform: translate(-50%);
+            box-shadow: 2.1rem 2rem 6.4rem 0 #00000066, 8.5rem 7.9rem 11.6rem 0 #00000017, 19rem 17.8rem 15.6rem 0 #0000000d, 33.8rem 31.7rem 18.5rem 0 #00000003, 52.9rem 49.5rem 20.3rem 0 #00000000;
+            z-index: 8;
+          }
+        }
+      }
+      .-con2 {
+        position: relative;
+        width: 100%;
+        height: -vw(2391);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url(../img/work/kbapp/bg-kbapp-detail-veiw02.png) no-repeat 0 0 / cover;
+        .txt-point {
+          color: #4d758b;
+        }
+        .device-image {
+          position: relative;
+          width: -vw(592);
+          height: -vw(1094);
+          margin-top: 9.5rem;
+          background: url(../img/work/kbapp/img-kbapp-divice01.png) no-repeat 0 0 / cover;
+        }
+        .obj-list {
+          position: absolute;
+          top: -vw(380);
+          left: -vw(56);
+          display: flex;
+          img {
+            width: -vw(454);
+            height: -vw(235);
+          }
+        }
+        .obj-card {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          img {
+            position: absolute;
+            width: -vw(460);
+            height: -vw(500);
+            &:first-child {
+              left: 22.9rem;
+              top: 117rem;
+              z-index: 10;
+            }
+            &:nth-child(2) {
+              top: 124.7rem;
+              right: 39.4rem;
+              z-index: 11;
+            }
+            &:nth-child(3) {
+              top: 167rem;
+              left: 43rem;
+            }
+            &:nth-child(4) {
+              left: -7.1rem;
+              top: 143.4rem;
+            }
+            &:nth-child(5) {
+              top: 152.4rem;
+              right: 61rem;
+              z-index: 0;
+            }
+            &:last-child {
+              top: 141.3rem;
+              right: -12rem;
+            }
+          }
+        }
+      }
+      .-con3 {
+        position: relative;
+        width: 100%;
+        height: -vw(1920);
+        background-color: #564d44;
+        color: $white-color;
+        .device-image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          img {
+            position: absolute;
+            width: -vw(592);
+            height: -vw(1094);
+            &:first-child {
+              top: -vw(560);
+              left: 50%;
+              transform: translateX(-50%);
+            }
+            &:nth-child(2) {
+              top: -vw(1604);
+              left: 50%;
+              transform: translateX(-50%);
+            }
+            &:nth-child(3) {
+              top: -vw(-225);
+              right: 0;
+            }
+            &:nth-child(4) {
+              top: -vw(190);
+              left: 0;
+            }
+            &:nth-child(5) {
+              bottom: -vw(-460);
+              left: -vw(100);
+            }
+            &:last-child {
+              right: -vw(100);
+              bottom: -vw(-145);
+            }
+          }
+        }
+      }
+      .-con4 {
+        position: relative;
+        height: -vw(1824);
+        background-color: #f4f4f4;
+        .device-image {
+          position: relative;
+          width: 100%;
+          height: -vw(1300);
+          margin-top: 10rem;
+          overflow: hidden;
+        }
+        .device-image-inner {
+          position: absolute;
+          left: 50%;
+          display: flex;
+          transform: translateX(-48%);
+          img {
+            width: -vw(592);
+            height: -vw(1094);
+            + img {
+              margin-left: -vw(-60);
+            }
+          }
+        }
+        .bg-illust {
+          position: absolute;
+          bottom: 0;
+          right: -vw(-177);
+          z-index: 10;
+          img {
+            width: -vw(877);
+            height: -vw(585);
+          }
+        }
+      }
+      .-con5 {
+        position: relative;
+        height: -vw(2913);
+        .bg-illust {
+          position: absolute;
+          top: -vw(436);
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: -1;
+          img {
+            width: -vw(3040);
+          }
+        }
+        .device-image {
+          height: -vw(1564);
+        }
+        .device-image-inner {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          transform: translateX(-vw(-100));
+          img {
+            width: -vw(592);
+            height: -vw(1094);
+            + img {
+              margin-left: -vw(-60);
+            }
+            &:nth-child(2) {
+              align-self: flex-end;
+            }
+            &:last-child {
+              align-self: flex-start;
+            }
+          }
+        }
+        .slide-card-box {
+          margin-top: -vw(160);
+          .slide-card {
+            width: -vw(3000);
+            height: -vw(300);
+            &:first-child {
+              background: url(../img/work/kbapp/bg-kbapp-card-grp01.png) no-repeat 0 0 / contain;
+            }
+            &:nth-child(2) {
+              transform: translateY(-vw(-40));
+              background: url(../img/work/kbapp/bg-kbapp-card-grp02.png) no-repeat 0 0 / contain;
+            }
+          }
+        }
+      }
+
+      .-con6 {
+        position: relative;
+        height: -vw(4364);
+        background: rgb(102, 67, 175);
+        background: linear-gradient(150deg, rgba(102, 67, 175, 1) 0%, rgba(113, 30, 142, 1) 100%);
+        color: $white-color;
+        .bg-illust {
+          position: absolute;
+          height: -vw(182);
+          top: -vw(751);
+          z-index: 1;
+          img {
+            height: 100%;
+          }
+        }
+        .device-image-inner {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 10;
+          img {
+            position: absolute;
+            width: -vw(592);
+
+            height: -vw(1094);
+            &:first-child {
+              height: auto;
+              top: -vw(582);
+              left: 50%;
+              transform: translateX(-50%);
+            }
+            &:nth-child(2) {
+              left: -vw(100);
+              top: -vw(1030);
+            }
+            &:nth-child(3) {
+              right: -vw(120);
+              top: -vw(1330);
+            }
+            &:nth-child(4) {
+              left: -vw(100);
+              top: -vw(2132);
+            }
+            &:nth-child(5) {
+              right: -vw(120);
+              top: -vw(2440);
+            }
+            &:nth-child(6) {
+              left: -vw(100);
+              top: -vw(3234);
+            }
+            &:last-child {
+              top: -vw(3546);
+              right: -vw(120);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* pc */
+@media only screen and (min-width: 1280px) {
+  .detail-area {
+    &.-kbapp {
+      .-con1 {
+        font-size: 8rem;
+        line-height: 11rem;
+        .bg-illust {
+          bottom: 28rem;
+          padding-left: 26rem;
+        }
+      }
+    }
+  }
+}

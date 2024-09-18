@@ -1,0 +1,142 @@
+@use 'sass:math';
+// uiux consulting 상세
+.consulting-wrap {
+  .step-box {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 700;
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      + li {
+        margin-top: 5rem;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 1.5rem;
+          left: 0.4rem;
+          display: block;
+          width: 1px;
+          height: 6.7rem;
+          background-color: #f0f0f0;
+          z-index: -1;
+        }
+      }
+      &::before {
+        content: '';
+        display: block;
+        width: 0.9rem;
+        height: 0.9rem;
+        border-radius: 0.9rem;
+        background-color: #f84773;
+      }
+    }
+  }
+  .pink-tit {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    color: #f84773;
+    text-align: center;
+  }
+  .border-box {
+    padding: 2rem 1.6rem;
+    border-radius: 1.2rem;
+    background-color: #f9f9f9;
+    img {
+      width: 100%;
+    }
+  }
+  .effect-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5.6rem;
+  }
+  .effect {
+    margin: 2rem 0;
+    p {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+      text-align: center;
+    }
+
+    i {
+      display: block;
+      width: 5.8rem;
+      height: 5.8rem;
+      margin: 0 auto;
+      &.maneging {
+        background: url(../img/consulting/ico-consulting-corporate.png) no-repeat 0 0 / cover;
+      }
+      &.quality {
+        background: url(../img/consulting/ico-consulting-quality.png) no-repeat 0 0 / cover;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+/* 테블릿 */
+@media only screen and (min-width: 1025px) {
+  .consulting-wrap {
+    .step-box {
+      margin-bottom: 6rem;
+      li {
+        gap: 6.1rem;
+        font-size: 5rem;
+        line-height: 5.9rem;
+        &::before {
+          width: 2.4rem;
+          height: 2.4rem;
+          border-radius: 2.4rem;
+        }
+        + li {
+          margin-top: 16rem;
+          &::after {
+            bottom: 4rem;
+            left: 1.1rem;
+            width: 0.2rem;
+            height: 19.6rem;
+          }
+        }
+      }
+    }
+    .contents-cell {
+      margin-top: 12rem;
+    }
+    .pink-tit {
+      margin-bottom: 3.2rem;
+      font-size: 2.6rem;
+      line-height: 2.8rem;
+    }
+    .border-box {
+      padding: 6rem 12rem;
+      border-radius: 2rem;
+    }
+    .effect-box {
+      gap: 34.7rem;
+    }
+    .effect {
+      margin: 8rem 0;
+      p {
+        margin-top: 6.2rem;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
+      i {
+        width: 13rem;
+        height: 13rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+}

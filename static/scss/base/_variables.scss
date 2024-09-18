@@ -1,0 +1,33 @@
+@use 'sass:math';
+
+//color
+$black-color: #000;
+$black-color2: #222;
+
+$base-txt-color: $black-color2;
+
+$gray-color: #555;
+$white-color: #fff;
+$pink-color: #e82fca;
+$purple-color: #8a44fc;
+$blue-color: #186ce9;
+$coral-color: #f84773;
+$red-color: #ff1d1d;
+$green-color: #00a91b;
+
+//background-color
+$bg-black: $black-color;
+$bg-white: $white-color;
+$bg-pink: $pink-color;
+$bg-purple: $purple-color;
+$bg-blue: $blue-color;
+$bg-coral: $coral-color;
+$bg-red: $red-color;
+$placeholder-txt-color: $gray-color;
+
+//border-radius
+$br-12: 1.2rem;
+$br-20: 2rem;
+$br-24: 2.4rem;
+$br-40: 4rem;
+$br-100: 10rem;

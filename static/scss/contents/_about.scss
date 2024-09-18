@@ -1,0 +1,143 @@
+@use 'sass:math';
+/* about */
+.about-area {
+  .inner {
+    padding: 0;
+  }
+}
+.about-wrap {
+  .greeting {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    .summary {
+      h3 {
+        font-size: 4rem;
+      }
+    }
+    .portrait-wrap {
+      width: 36rem;
+      height: 36rem;
+      margin-left: 24rem;
+      margin-top: 8rem;
+      background: url(/static/img/about/mimoji2.jpg) center bottom / 100% no-repeat;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+    }
+  }
+  hr {
+    margin: 3.6rem 24rem 0;
+  }
+  .about-box {
+    display: flex;
+    gap: 16rem;
+    padding: 4rem 24rem;
+    justify-content: flex-start;
+    .detail-wrap {
+      display: flex;
+      width: 50%;
+    }
+    h4 {
+      flex-shrink: 0;
+      width: 20rem;
+      color: #ccc;
+      font-weight: 400;
+    }
+    &.ty-2 {
+      gap: 0;
+    }
+    .experience-detail {
+      flex: 1;
+      &.ty-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 6rem);
+        gap: 2rem 2rem;
+        h5 {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      h5 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.6rem;
+        font-size: 1.6rem;
+        .date {
+          font-size: 1.4rem;
+          font-weight: normal;
+          color: #ccc;
+        }
+      }
+      p {
+        margin-bottom: 2.4rem;
+        font-size: 1.4rem;
+      }
+      .skills-box {
+        position: relative;
+        height: 6rem;
+        padding-left: 8rem;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 6rem;
+          height: 6rem;
+          background-size: 6rem 6rem;
+          background-position: left center;
+          background-repeat: no-repeat;
+        }
+        &:nth-child(1)::before {
+          background-image: url(/static/img/about/HTML_logo.svg);
+        }
+        &:nth-child(2)::before {
+          background-image: url(/static/img/about/CSS3_logo.svg);
+        }
+        &:nth-child(3)::before {
+          background-image: url(/static/img/about/javascript_logo.svg);
+        }
+        &:nth-child(4)::before {
+          background-image: url(/static/img/about/jquery_logo.svg);
+        }
+        &:nth-child(5)::before {
+          background-image: url(/static/img/about/Vue_logo.svg);
+        }
+        &:nth-child(6)::before {
+          background-image: url(/static/img/about/WordPress_logo.svg);
+        }
+        &:nth-child(7)::before {
+          background-image: url(/static/img/about/github_logo.svg);
+        }
+        &:nth-child(8)::before {
+          background-image: url(/static/img/about/Subversion_logo.svg);
+        }
+        &:nth-child(9)::before {
+          background-image: url(/static/img/about/Figma_logo.svg);
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+/* 테블릿 */
+@media only screen and (min-width: 1025px) {
+  .about-area {
+    .sub-tit {
+      padding-left: 18rem;
+    }
+  }
+}
+
+/* PC */
+@media only screen and (min-width: 1280px) {
+  /* about */
+  .about-area {
+    .sub-tit {
+      padding-left: 24rem;
+    }
+  }
+}

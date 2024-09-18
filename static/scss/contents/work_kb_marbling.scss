@@ -1,0 +1,523 @@
+@use 'sass:math';
+@import '../base/function', '../base/variables';
+/* KB 마블링 전용 */
+
+/* ==========================================================================
+	Media Queries for Responsive Design. (미디어 쿼리 분기점)
+========================================================================== */
+/* 모바일 */
+@media only screen and (min-width: 600px) {
+}
+
+/* 테블릿 */
+@media only screen and (min-width: 1025px) {
+  .detail-area {
+    p {
+      font-weight: 700;
+      font-size: 6rem;
+      line-height: 8rem;
+      text-align: center;
+    }
+    &.-marbling {
+      .detail-cell {
+        padding-top: -vw(240);
+      }
+      .-con1 {
+        height: -vw(1964);
+        background-color: #fbf5e2;
+        p {
+          font-size: 8rem;
+          font-weight: 700;
+          line-height: 10rem;
+        }
+        .device-image {
+          position: relative;
+          width: 100%;
+          margin-top: -vw(75);
+          .device {
+            position: absolute;
+            top: 0;
+            left: -vw(660);
+            width: -vw(1080);
+          }
+        }
+        .slide-card {
+          position: absolute;
+          top: -vw(300);
+          left: -vw(-272);
+          display: flex;
+          gap: -vw(80);
+          .card {
+            box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.16);
+          }
+          img {
+            width: -vw(429);
+          }
+        }
+      }
+      .-con2 {
+        position: relative;
+        height: -vw(1932);
+        background: url(../img/work/marbling/bg-marbling-con2-back.png) no-repeat 0 0 / cover;
+        color: $white-color;
+        .device-image {
+          width: 100%;
+          margin-top: 8.7rem;
+          img {
+            width: -vw(592);
+            margin: 0 auto;
+          }
+        }
+        .card-grp {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          .card {
+            position: absolute;
+            img {
+              width: 100%;
+            }
+            &:first-child {
+              width: -vw(378);
+              left: 0;
+              top: -vw(829);
+            }
+            &:nth-child(2) {
+              width: -vw(331);
+              left: -vw(500);
+              top: -vw(1349);
+            }
+            &:nth-child(3) {
+              width: -vw(337);
+              right: -vw(288);
+              top: -vw(1202);
+            }
+            &:nth-child(4) {
+              width: -vw(334);
+              left: -vw(330);
+              top: -vw(1087);
+            }
+            &:nth-child(5) {
+              width: -vw(428);
+              right: -vw(135);
+              top: -vw(825);
+            }
+            &:nth-child(6) {
+              width: -vw(299);
+              right: -vw(12);
+              top: -vw(1251);
+            }
+
+            &:last-child {
+              width: -vw(422);
+              right: -vw(426);
+              top: -vw(1425);
+            }
+          }
+        }
+      }
+      .-con3 {
+        position: relative;
+        height: -vw(3452);
+        .bg-illust {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          img {
+            position: absolute;
+            &:first-child {
+              height: -vw(1470);
+              right: 0;
+              top: 0;
+            }
+            &:nth-child(2) {
+              height: -vw(514);
+              left: 0;
+              bottom: -vw(380);
+            }
+            &:nth-child(3) {
+              width: -vw(1043);
+              bottom: 0;
+              left: -vw(180);
+            }
+            &:last-child {
+              height: -vw(168);
+              top: -vw(1655);
+              left: 0;
+            }
+          }
+        }
+        .device-image {
+          position: relative;
+          width: -vw(1463);
+          height: -vw(2724);
+          margin-top: -vw(88);
+          margin-left: -vw(121);
+          .device-image-inner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+          img {
+            width: -vw(592);
+          }
+          .device {
+            position: absolute;
+            .img-card {
+              position: absolute;
+              right: -vw(559);
+              top: 50%;
+              display: flex;
+              gap: -vw(20);
+              transform: translateY(-50%);
+              img {
+                width: -vw(442);
+              }
+            }
+            &:first-child {
+              right: 0;
+              top: 0;
+            }
+            &:nth-child(2) {
+              left: -vw(240);
+              top: -vw(737);
+            }
+            &:last-child {
+              right: 0;
+              bottom: -vw(166);
+            }
+            .scroll {
+              position: absolute;
+              left: -vw(68);
+              top: -vw(780);
+              z-index: -1;
+              img {
+                width: -vw(433);
+              }
+            }
+          }
+        }
+      }
+      .-con4 {
+        height: 397.2rem;
+        background-color: #ebf3f5;
+        .device-image {
+          margin-top: -vw(88);
+          .device-image-inner {
+            position: relative;
+            width: 59.2rem;
+            margin: 0 auto;
+            > .point-txt {
+              position: absolute;
+              top: 29rem;
+              left: -20rem;
+              .point {
+                width: -vw(183);
+              }
+            }
+          }
+          img {
+            position: relative;
+            width: 100%;
+            z-index: 5;
+          }
+          .card-box {
+            position: absolute;
+            top: 28.8rem;
+            left: 7.1rem;
+            display: flex;
+            gap: 4rem;
+            .card {
+              width: 42.5rem;
+            }
+          }
+        }
+        .point-txt {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+          z-index: 7;
+          > * {
+            flex-shrink: 0;
+          }
+          .point {
+            position: relative;
+            height: 0.2rem;
+            min-width: 3rem;
+            background-color: #fd7e64;
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: -0.4rem;
+              display: inline-block;
+              width: 1rem;
+              height: 1rem;
+              background-color: #fd7e64;
+              border-radius: 50%;
+            }
+          }
+          p {
+            font-weight: 700;
+            font-size: max(2.5rem, -vw(25));
+            line-height: max(3.2rem, -vw(32));
+            text-align: left;
+            + .point {
+              &::after {
+                left: auto;
+                right: -1rem;
+              }
+            }
+          }
+        }
+        .scroll-box {
+          position: relative;
+          top: -16.5rem;
+          left: 6.9rem;
+          width: 43rem;
+          height: 231.8rem;
+          background: url(../img/work/marbling/img-marbling-con4-scroll.png) no-repeat 0 0 / cover;
+          z-index: 1;
+          .card-grp {
+            position: absolute;
+            left: 41.6rem;
+            top: 11.2rem;
+            display: flex;
+            gap: 0.3rem;
+            img {
+              width: 39.1rem;
+            }
+          }
+          .point-txt {
+            &:first-child {
+              top: 7.9rem;
+              left: -24.8rem;
+              .point {
+                width: 12.3rem;
+              }
+            }
+            &:nth-child(2) {
+              top: 57rem;
+              right: -23.8rem;
+              .point {
+                width: 13rem;
+              }
+            }
+            &:nth-child(3) {
+              bottom: 37.7rem;
+              right: -31.8rem;
+              .point {
+                width: 13rem;
+              }
+            }
+          }
+        }
+      }
+      .-con5 {
+        position: relative;
+        height: -vw(3101);
+        .bg-illust {
+          position: absolute;
+          top: -vw(2387);
+          right: -vw(-155);
+          img {
+            width: -vw(592);
+          }
+        }
+        .device-image {
+          margin-top: -vw(88);
+          img {
+            width: -vw(592);
+          }
+        }
+        .device {
+          position: relative;
+        }
+        .card-grp {
+          display: flex;
+          gap: -vw(25);
+          position: absolute;
+          top: -vw(217);
+          left: -vw(-165);
+          z-index: -1;
+          img {
+            width: -vw(425);
+          }
+        }
+        .device-grp {
+          display: flex;
+          justify-content: center;
+          margin-top: -vw(50);
+          img {
+            &:nth-child(2) {
+              margin: 0 -5rem;
+            }
+          }
+        }
+      }
+      .-con6 {
+        position: relative;
+        height: -vw(3469);
+        background-color: #fffaea;
+        .bg-illust {
+          img {
+            position: absolute;
+            &:first-child {
+              width: -vw(1666);
+              top: -vw(98);
+              left: -vw(212);
+            }
+            &:nth-child(2) {
+              width: -vw(1304);
+              left: -vw(-34);
+              top: -vw(1670);
+              z-index: 7;
+            }
+            &:last-child {
+              width: -vw(760);
+              bottom: -vw(603);
+              right: -vw(-53);
+            }
+          }
+        }
+        .device-image {
+          margin-top: -vw(88);
+        }
+        .device {
+          position: relative;
+          width: fit-content;
+          margin: 0 auto;
+          + .device {
+            margin-top: -vw(82);
+          }
+          img {
+            width: -vw(592);
+            + img {
+              margin-left: -vw(-90);
+            }
+          }
+          .card {
+            position: absolute;
+            top: -vw(638);
+            left: -vw(-95);
+            img {
+              width: -vw(369);
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              left: -vw(-133);
+              top: -vw(-195);
+              display: block;
+              width: -vw(328);
+              height: -vw(235);
+              background: url(../img/work/marbling/bg-marbling-con6-illust.png) no-repeat 0 0 / cover;
+            }
+          }
+          .card-grp {
+            img {
+              width: -vw(462);
+              + img {
+                margin-left: -vw(-50);
+              }
+            }
+          }
+          &.ico {
+            &::before {
+              content: '';
+              position: absolute;
+              top: -vw(-46);
+              right: -vw(259);
+              display: block;
+              width: -vw(332);
+              height: -vw(132);
+              background: url(../img/work/marbling/bg-marbling-con6-illust02.png) no-repeat 0 0 / cover;
+            }
+          }
+        }
+      }
+      .-con7 {
+        height: -vw(3350);
+        background-color: #635c57;
+        .device-image {
+          position: relative;
+          img {
+            position: absolute;
+            width: -vw(424);
+            &:first-child {
+              top: -vw(652);
+              left: -vw(185);
+            }
+            &:nth-child(2) {
+              left: 50%;
+              transform: translateX(-50%);
+              width: -vw(592);
+            }
+            &:last-child {
+              top: -vw(825);
+              right: -vw(185);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* pc */
+@media only screen and (min-width: 1280px) {
+  .detail-area {
+    &.-marbling {
+      .-con4 {
+        .point-txt {
+          gap: 2.6rem;
+          p {
+            font-size: max(4rem, -vw(40));
+            line-height: max(5.2rem, -vw(52));
+          }
+        }
+        .device-image {
+          .device-image-inner {
+            > .point-txt {
+              top: 27rem;
+              left: -40rem;
+            }
+          }
+          .scroll-box {
+            .point-txt {
+              &:first-child {
+                left: -42rem;
+                top: 5rem;
+                .point {
+                  width: 18.3rem;
+                }
+              }
+              &:nth-child(2) {
+                right: -37rem;
+                top: 55rem;
+                .point {
+                  width: 16rem;
+                }
+              }
+              &:nth-child(3) {
+                bottom: 35.7rem;
+                right: -47.8rem;
+                .point {
+                  width: 16rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
