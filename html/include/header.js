@@ -10,9 +10,9 @@ function includeHeader() {
       </button>
       <nav class="commonGnb">
         <ol>
-          <li class="menu-li"><a href="../">Home</a></li>
-          <li class="menu-li"><a href="../about.html">About</a></li>
-          <li class="menu-li"><a href="../work.html">Work</a></li>          
+          <li class="menu-li"><a href="./">Home</a></li>
+          <li class="menu-li"><a href="./about.html">About</a></li>
+          <li class="menu-li"><a href="./work.html">Work</a></li>          
         </ol>                
       </nav>
     </div>
