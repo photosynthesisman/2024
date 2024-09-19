@@ -35,21 +35,18 @@
       width: 100%;
       height: -vh(100);
       background-size: cover;
-      background-position: top;
+      background-position: center;
       background-repeat: no-repeat;
       overflow: hidden;
-      &.bg-1 {
-        background-image: url(../img/main/bg-main-banner1.png);
-      }
-      &.bg-2 {
-        background-color: #c8f8f8;
-      }
-      img {
-        @include img-fit($isAbsolute: true);
-        z-index: -1;
-        &.img-pc {
-          display: none;
-        }
+      background-image: url(./../img/main/background_1.png);
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 180, 255, 0.1);
       }
       .mobile-img {
         position: relative;
@@ -57,7 +54,6 @@
         height: 100%;
         overflow: hidden;
         display: block;
-
         img {
           display: block;
           position: absolute;
@@ -70,135 +66,41 @@
           z-index: 10;
         }
       }
-      .context-box {
+      .txt_wrap {
         position: absolute;
-        left: 3.2rem;
-        top: 10rem;
-        color: $black-color;
-        z-index: 410;
-        .tag {
-          display: none;
-          font-size: 2rem;
-          font-weight: 800;
-          line-height: 2.5rem;
-        }
-        .dot-txt {
-          display: inline-block;
-          font-family: 'Pretendard gov';
-          font-weight: 600;
-          font-size: 1.6rem;
-          transform: translateY(-0.2rem);
-          &::before {
-            content: '';
-            display: inline-block;
-            width: 0.4rem;
-            height: 0.4rem;
-            margin: 0 1.2rem;
-            background-color: $black-color;
-            border-radius: 50%;
-            vertical-align: middle;
+        top: calc(50% - 80px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 100;
+        text-align: center;
+        h2 {
+          margin-bottom: 1.7rem;
+          padding: 0 8rem;
+          color: #fff;
+          font-size: 12rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          line-height: 1;
+          opacity: 0;
+          visibility: hidden;
+          strong {
+            color: #00d8ff;
           }
         }
-        .headtit {
-          margin-top: 1.6rem;
-          font-size: 2.8rem;
-          font-weight: 800;
-          line-height: 3.5rem;
-          br {
-            display: none;
-          }
-          &.-eng {
-            margin: 0;
-            font-weight: 700;
-            line-height: 3.6rem;
-            text-transform: uppercase;
-          }
+        p {
+          position: absolute;
+          left: 50%;
+          width: 0;
+          text-align: left;
+          font-size: 2.4rem;
+          color: #fff;
+          line-height: 3.2rem;
+          letter-spacing: -0.06em;
+          overflow: hidden;
+          white-space: nowrap;
+          transition: width 3s;
         }
-        .subtit {
-          font-family: 'Pretendard gov';
-          font-size: 1.8rem;
-          font-weight: 700;
-          line-height: 2.1rem;
-          img {
-            height: 100%;
-            position: relative;
-            width: auto;
-            object-fit: inherit;
-          }
-        }
-        .ico-award-box {
-          display: flex;
-          gap: 2rem;
-          align-items: center;
-          margin-top: 2rem;
-        }
-        .ico-app-award {
-          display: inline-block;
-          width: 3rem;
-          height: 4rem;
-          background: url(../img/main/img-aapAward-symbol.png) no-repeat 0 0 / cover;
-        }
-        .ico-and-award {
-          display: inline-block;
-          width: 7.4rem;
-          height: 3.2rem;
-          background: url(../img/main/img-and-symbol.png) no-repeat 0 0 / cover;
-        }
-      }
-      &.normal-type {
-        .text-wht {
-          color: $white-color;
-        }
-        .mobile-img {
-          img {
-            width: 100%;
-            left: 0;
-            top: 0;
-            height: 100%;
-            transform: none;
-            object-fit: cover;
-          }
-        }
-      }
-    }
-    .pagination-wrap {
-      position: absolute;
-      left: 3.2rem;
-      bottom: 10.2rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .swiper-pagination {
-      top: auto;
-      position: relative;
-      text-align: left;
-      width: auto;
-      bottom: auto;
-      font-size: 0;
-      .swiper-pagination-bullet {
-        width: 0.5rem;
-        height: 0.5rem;
-        background-color: $black-color;
-        opacity: 1;
-      }
-      .swiper-pagination-bullet-active {
-        width: 3rem;
-        background-color: $coral-color;
-        border-radius: 1rem;
-      }
-    }
-    .swiper-control {
-      width: 2rem;
-      height: 2rem;
-      font-size: 0;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Crect x='5.5' y='4' width='3' height='12' rx='1' fill='black'/%3E%3Crect x='11.5' y='4' width='3' height='12' rx='1' fill='black'/%3E%3C/svg%3E");
-      z-index: 2;
-      &.pause {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M15.6174 9.14852C16.2515 9.53906 16.2515 10.4609 15.6174 10.8515L7.27438 15.9894C6.60812 16.3997 5.75 15.9204 5.75 15.1379L5.75 4.86205C5.75 4.07959 6.60812 3.60026 7.27438 4.01057L15.6174 9.14852Z' fill='black'/%3E%3C/svg%3E");
       }
     }
   }
@@ -823,7 +725,7 @@
     .visual-box {
       .visual-cell {
         &.bg-1 {
-          background-image: url(../img/main/bg-main-banner1-pc.png);
+          background-image: url(./../img/main/background_1.png);
         }
         &.bg-2 {
           background-color: #c8f8f8;

@@ -1,6 +1,7 @@
 $(function () {
   commonUI();
   mainUI();
+  mainTitle();
 });
 $(window).on('resize', function () {
   vhChk();
@@ -11,7 +12,10 @@ function vhChk() {
   const $vh = window.innerHeight * 0.01;
   $('html').css('--vh', $vh + 'px');
 }
-
+function mainTitle() {
+  $('.txt_wrap h2').css({ opacity: 0, visibility: 'visible' }).animate({ opacity: 1 }, 1500);
+  $('.txt_wrap p').css({ width: 0 }).animate({ width: '100%' }, 400);
+}
 function commonUI() {
   // gnb 메뉴
 
@@ -85,6 +89,7 @@ function commonUI() {
         scrollBtn.fadeIn();
       } else if (scrollArea.scrollTop() <= 0) {
         // 스크롤 0 일때 닫기
+        mainTitle();
         setTimeout(function () {
           wrapper.classList.remove('active');
         }, 100);
