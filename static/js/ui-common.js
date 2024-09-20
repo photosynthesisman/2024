@@ -586,3 +586,11 @@ function getOffset(element) {
   }
   return { left: $elX, top: $elY };
 }
+function checkUrl() {
+  const url = window.location.href;
+  if (window.location.href.includes('work.html') || window.location.href.includes('about.html')) {
+    $('#header').addClass('in-white');
+  } else {
+    $('#header').removeClass('in-white');
+  }
+}

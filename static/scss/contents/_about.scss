@@ -8,17 +8,18 @@
 .about-wrap {
   .greeting {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    gap: 6rem;
     .summary {
       h3 {
         font-size: 4rem;
       }
     }
     .portrait-wrap {
+      flex-shrink: 0;
       width: 36rem;
       height: 36rem;
-      margin-left: 24rem;
       margin-top: 8rem;
       background: url(/static/img/about/mimoji2.jpg) center bottom / 100% no-repeat;
       border: 1px solid #ccc;
@@ -26,16 +27,17 @@
     }
   }
   hr {
-    margin: 3.6rem 24rem 0;
+    margin: 3.6rem 2rem 0;
   }
   .about-box {
     display: flex;
-    gap: 16rem;
-    padding: 4rem 24rem;
+    flex-direction: column;
+    gap: 14rem;
+    padding: 4rem 2rem;
     justify-content: flex-start;
     .detail-wrap {
       display: flex;
-      width: 50%;
+      width: 100%;
     }
     h4 {
       flex-shrink: 0;
@@ -44,15 +46,16 @@
       font-weight: 400;
     }
     &.ty-2 {
+      flex-direction: row;
       gap: 0;
     }
     .experience-detail {
       flex: 1;
       &.ty-2 {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(5, 6rem);
-        gap: 2rem 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 6rem);
+        gap: 4rem 2rem;
         h5 {
           position: absolute;
           top: 50%;
@@ -123,11 +126,53 @@
 /* ==========================================================================
 	Media Queries for Responsive Design. (미디어 쿼리 분기점)
 ========================================================================== */
+@media only screen and (max-width: 625px) {
+  .about-wrap {
+    .about-box {
+      &.ty-2 {
+        flex-direction: column;
+      }
+      .detail-wrap {
+        flex-direction: column;
+      }
+      h4 {
+        margin-bottom: 4rem;
+      }
+    }
+    .greeting {
+      gap: 4rem;
+      .summary {
+        h3 {
+          font-size: 3.2rem;
+        }
+      }
+      .portrait-wrap {
+        width: 28rem;
+        height: 28rem;
+      }
+    }
+  }
+}
 /* 테블릿 */
 @media only screen and (min-width: 1025px) {
   .about-area {
     .sub-tit {
       padding-left: 18rem;
+    }
+  }
+  .about-wrap {
+    .about-box {
+      padding: 4rem 18rem;
+      .experience-detail {
+        &.ty-2 {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 6rem);
+          gap: 4rem 2rem;
+        }
+      }
+    }
+    hr {
+      margin: 3.6rem 18rem 0;
     }
   }
 }
@@ -138,6 +183,85 @@
   .about-area {
     .sub-tit {
       padding-left: 24rem;
+    }
+  }
+  .about-wrap {
+    .about-box {
+      padding: 4rem 24rem;
+      .experience-detail {
+        &.ty-2 {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 6rem);
+          gap: 4rem 2rem;
+        }
+      }
+    }
+    hr {
+      margin: 3.6rem 24rem 0;
+    }
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .about-wrap {
+    .about-box {
+      .experience-detail {
+        &.ty-2 {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 6rem);
+          gap: 4rem 2rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .about-wrap {
+    .greeting {
+      flex-direction: row;
+      gap: 10rem;
+      .portrait-wrap {
+        margin-left: 24rem;
+      }
+    }
+    .about-box {
+      .experience-detail {
+        &.ty-2 {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 6rem);
+          gap: 4rem 2rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .about-wrap {
+    .about-box {
+      .experience-detail {
+        &.ty-2 {
+          grid-template-columns: repeat(5, 1fr);
+          grid-template-rows: repeat(2, 6rem);
+          gap: 4rem 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .about-wrap {
+    .about-box {
+      flex-direction: row;
+      .detail-wrap {
+        width: 50%;
+      }
+      .experience-detail {
+        &.ty-2 {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(5, 6rem);
+          gap: 2rem 2rem;
+        }
+      }
     }
   }
 }
