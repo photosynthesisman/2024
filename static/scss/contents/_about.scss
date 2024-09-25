@@ -21,7 +21,8 @@
       width: 36rem;
       height: 36rem;
       margin-top: 8rem;
-      background: #c4d0e8 url(/static/img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
+      // background: #c4d0e8 url(/static/img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
+      background: #c4d0e8 url(../../../static/img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
       border: 1px solid #ccc;
       border-radius: 50%;
       animation: flip_image 3.5s infinite alternate;
@@ -269,9 +270,9 @@
 
 @keyframes flip_image {
   from {
-    background: #c4d0e8 url(/static/img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
+    background: #c4d0e8 url(../../../static/img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
   }
   to {
-    background: #c4d0e8 url(/static/img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
+    background: #c4d0e8 url(../../../static/img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
   }
 }
