@@ -455,7 +455,7 @@ function workUI() {
 
   // init Isotope
   if ($('.work-wrap .grid-item').length) {
-    workItemSize();
+    // workItemSize();
     $workGrid = $('.work-wrap .grid').isotope({
       layoutMode: 'packery',
       itemSelector: '.grid-item'
@@ -501,7 +501,7 @@ function workUI() {
   function tagFilterInit($ary) {
     const filterValue = $ary.length ? $ary.join(', ') : '*';
     $workGrid.isotope({ filter: filterValue });
-    workItemSize();
+    // workItemSize();
   }
 }
 
