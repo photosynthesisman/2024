@@ -38,7 +38,7 @@
       background-position: center;
       background-repeat: no-repeat;
       overflow: hidden;
-      background-image: url(./../img/main/background_1.png);
+      background-image: url(./../img/main/background_2.jpg);
       &::after {
         content: '';
         position: absolute;
@@ -761,7 +761,7 @@
           }
         }
         &.bg-1 {
-          background-image: url(./../img/main/background_1.png);
+          background-image: url(./../img/main/background_2.jpg);
         }
         &.bg-2 {
           background-color: #c8f8f8;
