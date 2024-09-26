@@ -24,7 +24,7 @@
       background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 60% no-repeat;
       border: 1px solid #ccc;
       border-radius: 50%;
-      // animation: flip_image 3.5s infinite alternate;
+      animation: flip_image 3.5s infinite alternate;
     }
   }
   hr {
@@ -93,31 +93,31 @@
           background-repeat: no-repeat;
         }
         &:nth-child(1)::before {
-          background-image: url(/static/img/about/HTML_logo.svg);
+          background-image: url(./../img/about/HTML_logo.svg);
         }
         &:nth-child(2)::before {
-          background-image: url(/static/img/about/CSS3_logo.svg);
+          background-image: url(./../img/about/CSS3_logo.svg);
         }
         &:nth-child(3)::before {
-          background-image: url(/static/img/about/javascript_logo.svg);
+          background-image: url(./../img/about/javascript_logo.svg);
         }
         &:nth-child(4)::before {
-          background-image: url(/static/img/about/jquery_logo.svg);
+          background-image: url(./../img/about/jquery_logo.svg);
         }
         &:nth-child(5)::before {
-          background-image: url(/static/img/about/Vue_logo.svg);
+          background-image: url(./../img/about/Vue_logo.svg);
         }
         &:nth-child(6)::before {
-          background-image: url(/static/img/about/WordPress_logo.svg);
+          background-image: url(./../img/about/WordPress_logo.svg);
         }
         &:nth-child(7)::before {
-          background-image: url(/static/img/about/github_logo.svg);
+          background-image: url(./../img/about/github_logo.svg);
         }
         &:nth-child(8)::before {
-          background-image: url(/static/img/about/Subversion_logo.svg);
+          background-image: url(./../img/about/Subversion_logo.svg);
         }
         &:nth-child(9)::before {
-          background-image: url(/static/img/about/Figma_logo.svg);
+          background-image: url(./../img/about/Figma_logo.svg);
         }
       }
     }
@@ -269,9 +269,9 @@
 
 @keyframes flip_image {
   from {
-    background: #c4d0e8 url(../../../static/img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
+    background: #c4d0e8 url(./../img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
   }
   to {
-    background: #c4d0e8 url(../../../static/img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
+    background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
   }
 }
