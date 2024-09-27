@@ -10,17 +10,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 8rem;
+    padding: 0 2rem;
     gap: 6rem;
     .summary {
+      width: 100%;
+      text-align: center;
       h3 {
         font-size: 4rem;
+        margin-bottom: 2.4rem;
+      }
+      .detail-wrap {
+        display: flex;
+        flex-direction: column;
+        h4 {
+          flex-shrink: 0;
+          width: 20rem;
+          margin-bottom: 4rem;
+          color: #ccc;
+          font-weight: 400;
+          text-align: left;
+        }
+        .skills-wrap {
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: repeat(4, 1fr);
+          .skills-box {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.6rem;
+            img {
+              width: 6rem;
+              height: 6rem;
+            }
+          }
+        }
+      }
+      hr {
+        margin: 3.6rem 0;
       }
     }
     .portrait-wrap {
       flex-shrink: 0;
       width: 36rem;
       height: 36rem;
-      margin-top: 8rem;
       background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 60% no-repeat;
       border: 1px solid #ccc;
       border-radius: 50%;
@@ -46,23 +80,13 @@
       color: #ccc;
       font-weight: 400;
     }
-    &.ty-2 {
-      flex-direction: row;
-      gap: 0;
-    }
     .experience-detail {
+      width: 100%;
       flex: 1;
-      &.ty-2 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 6rem);
-        gap: 4rem 2rem;
-        h5 {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-      }
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 6rem);
+      gap: 4rem 6rem;
       h5 {
         display: flex;
         justify-content: space-between;
@@ -75,50 +99,7 @@
         }
       }
       p {
-        margin-bottom: 3.2rem;
         font-size: 1.4rem;
-      }
-      .skills-box {
-        position: relative;
-        height: 6rem;
-        padding-left: 8rem;
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          width: 6rem;
-          height: 6rem;
-          background-size: 6rem 6rem;
-          background-position: left center;
-          background-repeat: no-repeat;
-        }
-        &:nth-child(1)::before {
-          background-image: url(./../img/about/HTML_logo.svg);
-        }
-        &:nth-child(2)::before {
-          background-image: url(./../img/about/CSS3_logo.svg);
-        }
-        &:nth-child(3)::before {
-          background-image: url(./../img/about/javascript_logo.svg);
-        }
-        &:nth-child(4)::before {
-          background-image: url(./../img/about/jquery_logo.svg);
-        }
-        &:nth-child(5)::before {
-          background-image: url(./../img/about/Vue_logo.svg);
-        }
-        &:nth-child(6)::before {
-          background-image: url(./../img/about/WordPress_logo.svg);
-        }
-        &:nth-child(7)::before {
-          background-image: url(./../img/about/github_logo.svg);
-        }
-        &:nth-child(8)::before {
-          background-image: url(./../img/about/Subversion_logo.svg);
-        }
-        &:nth-child(9)::before {
-          background-image: url(./../img/about/Figma_logo.svg);
-        }
       }
     }
   }
@@ -154,6 +135,34 @@
     }
   }
 }
+@media only screen and (min-width: 625px) {
+  .about-wrap {
+    .greeting {
+      .summary {
+        .detail-wrap {
+          flex-direction: row;
+          .skills-wrap {
+            grid-template-columns: repeat(5, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 750px) {
+  .about-wrap {
+    .greeting {
+      .summary {
+        .detail-wrap {
+          .skills-wrap {
+            gap: 4rem;
+            grid-template-columns: repeat(5, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
 /* 테블릿 */
 @media only screen and (min-width: 1025px) {
   .about-area {
@@ -162,6 +171,16 @@
     }
   }
   .about-wrap {
+    .greeting {
+      padding: 4rem 18rem;
+      .summary {
+        .detail-wrap {
+          .skills-wrap {
+            grid-template-columns: repeat(5, 1fr);
+          }
+        }
+      }
+    }
     .about-box {
       padding: 4rem 18rem;
       .experience-detail {
@@ -189,6 +208,16 @@
   .about-wrap {
     .about-box {
       padding: 4rem 24rem;
+    }
+    .greeting {
+      padding: 4rem 24rem;
+      .summary {
+        .detail-wrap {
+          .skills-wrap {
+            grid-template-columns: repeat(6, 1fr);
+          }
+        }
+      }
       .experience-detail {
         &.ty-2 {
           grid-template-columns: repeat(3, 1fr);
@@ -219,18 +248,22 @@
   .about-wrap {
     .greeting {
       flex-direction: row;
+      padding: 0 24rem;
       gap: 10rem;
-      .portrait-wrap {
-        margin-left: 24rem;
+      .summary {
+        text-align: left;
+        .detail-wrap {
+          flex-direction: column;
+          .skills-wrap {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+          }
+        }
       }
     }
     .about-box {
       .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(4, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }
@@ -251,18 +284,17 @@
 
 @media only screen and (min-width: 1750px) {
   .about-wrap {
-    .about-box {
-      flex-direction: row;
-      .detail-wrap {
-        width: 50%;
-      }
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(5, 6rem);
-          gap: 2rem 2rem;
+    .greeting {
+      .summary {
+        .detail-wrap {
+          .skills-wrap {
+            grid-template-columns: repeat(9, 1fr);
+          }
         }
       }
+    }
+    .about-box {
+      flex-direction: row;
     }
   }
 }
