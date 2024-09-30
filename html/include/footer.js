@@ -1,17 +1,10 @@
 function includeFooter() {
   let str = `
 <footer id="footer" class="footer">
-  <div class="inner">
-    <div class="logo" role="img" aria-label="최재석의 포트폴리오"></div>
+  <div class="inner">    
     <div class="f-menu-list">
     </div>
-    <div class="f-info-grp">  
-      <div class="info-box">
-        <div class="tit">Experience</div>
-        <div class="txt">
-          <a href="https://weak-hell-eee.notion.site/2d3d46708c754a66b1b3504dd4c83884">경력기술서 페이지 바로가기</a>
-        </div>
-      </div>   
+    <div class="f-info-grp">     
       <div class="info-box">
         <div class="tit">Contact</div>
         <div class="txt">          

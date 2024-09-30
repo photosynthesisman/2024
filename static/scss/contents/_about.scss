@@ -6,6 +6,7 @@
   }
 }
 .about-wrap {
+  color: $white-color;
   .greeting {
     display: flex;
     flex-direction: column;
@@ -68,7 +69,7 @@
     display: flex;
     flex-direction: column;
     gap: 14rem;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0;
     justify-content: flex-start;
     .detail-wrap {
       display: flex;
@@ -85,10 +86,11 @@
       flex: 1;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, 6rem);
+      grid-template-rows: repeat(2, 1fr);
       gap: 4rem 6rem;
       h5 {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         margin-bottom: 0.6rem;
         font-size: 1.6rem;
@@ -111,9 +113,6 @@
 @media only screen and (max-width: 625px) {
   .about-wrap {
     .about-box {
-      &.ty-2 {
-        flex-direction: column;
-      }
       .detail-wrap {
         flex-direction: column;
       }
@@ -147,6 +146,13 @@
         }
       }
     }
+    .about-box {
+      .experience-detail {
+        h5 {
+          flex-direction: row;
+        }
+      }
+    }
   }
 }
 @media only screen and (min-width: 750px) {
@@ -171,6 +177,7 @@
     }
   }
   .about-wrap {
+    color: $black-color;
     .greeting {
       padding: 4rem 18rem;
       .summary {
@@ -183,13 +190,6 @@
     }
     .about-box {
       padding: 4rem 18rem;
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
     }
     hr {
       margin: 3.6rem 18rem 0;
@@ -218,29 +218,9 @@
           }
         }
       }
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
     }
     hr {
       margin: 3.6rem 24rem 0;
-    }
-  }
-}
-@media only screen and (min-width: 1300px) {
-  .about-wrap {
-    .about-box {
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
     }
   }
 }
@@ -261,6 +241,10 @@
         }
       }
     }
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .about-wrap {
     .about-box {
       .experience-detail {
         grid-template-columns: repeat(2, 1fr);
@@ -268,20 +252,6 @@
     }
   }
 }
-@media only screen and (min-width: 1600px) {
-  .about-wrap {
-    .about-box {
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
-    }
-  }
-}
-
 @media only screen and (min-width: 1750px) {
   .about-wrap {
     .greeting {
