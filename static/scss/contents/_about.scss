@@ -44,6 +44,12 @@
             img {
               width: 6rem;
               height: 6rem;
+              &.in-normal {
+                display: none;
+              }
+              &.in-dark {
+                display: block;
+              }
             }
           }
         }
@@ -184,6 +190,16 @@
         .detail-wrap {
           .skills-wrap {
             grid-template-columns: repeat(5, 1fr);
+            .skills-box {
+              img {
+                &.in-normal {
+                  display: block;
+                }
+                &.in-dark {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }

@@ -252,6 +252,7 @@
           height: 34.6rem;
           display: block;
           transition: 0.3s ease-out transform;
+          cursor: default;
           &::before {
             content: '';
             display: block;
