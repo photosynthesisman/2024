@@ -50,10 +50,17 @@
         <div class="main-slide-wrap">
           <div class="swiper main-swiper visual-box">
             <div class="swiper-wrapper">
-              <div class="swiper-slide visual-cell">
-                <div class="portrait"></div>
-                <div class="portrait_explain">고독한 퍼블리셔</div>
-                <div class="ball"></div>
+              <div class="swiper-slide visual-cell bg-1">
+                <div class="txt_wrap">
+                  <h2 class="eng">
+                    <strong>web</strong><br class="mobile-break" />
+                    publisher
+                  </h2>
+                  <p>
+                    퍼블리셔<br />
+                    <strong>최재석</strong>입니다
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -262,33 +269,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
     <script src="./static/js/ui-common.js"></script>
     <script>
-      const ball = document.querySelector('.ball');
-      let mouseX = 0;
-      let mouseY = 0;
-
-      let ballX = 0;
-      let ballY = 0;
-
-      // let speed = 0.02;
-      let speed = 0.1;
-
-      function animate() {
-        let distX = mouseX - ballX;
-        let distY = mouseY - ballY;
-
-        ballX = ballX + distX * speed;
-        ballY = ballY + distY * speed;
-
-        ball.style.left = ballX + 'px';
-        ball.style.top = ballY + 'px';
-
-        requestAnimationFrame(animate);
-      }
-      animate();
-
-      document.addEventListener('mousemove', function (event) {
-        mouseX = event.pageX;
-        mouseY = event.pageY;
+      $('.visual-cell').ripples({
+        resolution: 512, // 렌더링 값이 클수록 잔물결 효과가 느리게 전파
+        dropRadius: 20,
+        perturbance: 0.04 // 잔물경 굴절 강도. 0은 굴절 없음
+      });
+      $('.detail-open').on('click', function (e) {
+        e.preventDefault();
       });
     </script>
   </body>
