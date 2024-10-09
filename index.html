@@ -52,8 +52,15 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide visual-cell">
                 <div class="portrait"></div>
-                <div class="portrait_explain">고독한 퍼블리셔</div>
+                <div class="portrait_explain">
+                  <div>&lt;<em class="cBlue">div</em> <em class="cSblue">class</em>=<em class="cOrange">"portrait_explain"</em>&gt;</div>
+                  <div class="depth2">&lt;<em class="cBlue">div</em> <em class="cSblue">class</em>=<em class="cOrange">"cloneText"</em>&gt;</div>
+                  <div class="cloneText"></div>
+                  <div class="depth2">&lt;/<em class="cBlue">div</em>&gt;</div>
+                  <div>&lt;/<em class="cBlue">div</em>&gt;</div>
+                </div>
                 <div class="ball"></div>
+                <div class="previousText"></div>
               </div>
             </div>
           </div>
@@ -188,7 +195,7 @@
                               현대차증권 MTS 마이데이터 통합 구축
                               <span class="date">2024-06 ~ 2024-08</span>
                             </h5>
-                            <p>VUE를 활용한 첫 번째 프로젝트. PA로써 작업</p>
+                            <p>VUE를 활용한 첫 번째 프로젝트. PA로서 작업</p>
                           </div>
                           <div>
                             <h5>
@@ -202,7 +209,7 @@
                               농협공공데이터포털 연계플랫폼 구축
                               <span class="date">2023-07 ~ 2023-09</span>
                             </h5>
-                            <p>HTML/SCSS/JavaScript 등을 활용한 프로젝트. PA로써 참여</p>
+                            <p>HTML/SCSS/JavaScript 등을 활용한 프로젝트. PA로서 참여</p>
                           </div>
                           <div>
                             <h5>
@@ -210,7 +217,7 @@
                               <span class="date">2022-07 ~ 2022-12</span>
                             </h5>
                             <p>
-                              프로젝트의 시작과 끝을 함께한 프로젝트. PA로써 참여<br />
+                              프로젝트의 시작과 끝을 함께한 프로젝트. PA로서 참여<br />
                               HTML/CSS/JavaScript 등을 활용했으며, 웹표준및 접근성을 준수
                             </p>
                           </div>
@@ -226,7 +233,7 @@
                               한국금융증권
                               <span class="date">2022-02 ~ 2022-03</span>
                             </h5>
-                            <p>websquare를 활용한 첫 번째 프로젝트. PA로써 참여</p>
+                            <p>websquare를 활용한 첫 번째 프로젝트. PA로서 참여</p>
                           </div>
                         </div>
                       </div>
@@ -289,6 +296,52 @@
       document.addEventListener('mousemove', function (event) {
         mouseX = event.pageX;
         mouseY = event.pageY;
+      });
+
+      $(document).ready(function () {
+        const preTxt = $('.previousText');
+        preTxt.html('<h2 class="greeting-msg"></h2>');
+
+        const msgBox = $('.greeting-msg');
+        msgBox.clone().appendTo('.cloneText');
+        const msgClone = $('.cloneText').find('.greeting-msg');
+
+        let yourTxt = '';
+        yourTxt = 'the publisher';
+
+        msgClone.text(`hello, i am ${yourTxt}`);
+        let lengthTxt = yourTxt.length + 2;
+
+        let subTxt = msgBox.text().substr(1 - lengthTxt);
+        let sliceTxt = msgBox.text().slice(0, 11);
+
+        setTimeout(function () {
+          msgBox.css('text-transform', 'uppercase');
+          msgClone.css('text-transform', 'uppercase');
+        }, 5500);
+
+        function typeEffect(element, txtSpeed) {
+          var text = element.text();
+          element.text('');
+
+          var i = 0;
+          var timer = setInterval(function () {
+            if (i < 25) {
+              element.append(text.charAt(i));
+              i++;
+            } else {
+              clearInterval(timer);
+            }
+          }, txtSpeed);
+        }
+
+        // application
+        var txtSpeed = 200;
+        var h1 = $('.greeting-msg');
+        var delay = h1.text().length * txtSpeed + txtSpeed;
+
+        // type affect to header
+        typeEffect(h1, txtSpeed);
       });
     </script>
   </body>

@@ -42,8 +42,8 @@
             flex-direction: column;
             gap: 1.6rem;
             img {
-              width: 6rem;
-              height: 6rem;
+              width: 5.4rem;
+              height: 5.4rem;
               &.in-normal {
                 display: none;
               }
@@ -99,7 +99,7 @@
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 0.6rem;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         .date {
           font-size: 1.4rem;
           font-weight: normal;
@@ -107,7 +107,7 @@
         }
       }
       p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
     }
   }
@@ -254,6 +254,9 @@
             grid-template-columns: repeat(5, 1fr);
             gap: 2rem;
           }
+        }
+        p {
+          font-size: 1.8rem;
         }
       }
     }
