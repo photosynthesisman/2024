@@ -121,7 +121,8 @@
         }
       }
       .ball {
-        background-color: #ffffff;
+        display: none;
+        background-color: $white-color;
         width: 100rem;
         height: 100rem;
         border-radius: 50%;
@@ -881,6 +882,9 @@
             width: 65rem;
             height: 65rem;
           }
+        }
+        .ball {
+          display: block;
         }
         .portrait_explain {
           top: 20%;
