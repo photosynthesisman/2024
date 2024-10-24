@@ -55,21 +55,21 @@
         }
       }
       hr {
-        margin: 3.6rem 0;
+        margin: 2.4rem 0;
       }
     }
     .portrait-wrap {
       flex-shrink: 0;
       width: 36rem;
       height: 36rem;
-      background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 60% no-repeat;
-      border: 1px solid #ccc;
+      background: #c4d0e8 url(./../img/about/mimoji2.png) right 2rem center / 95% no-repeat;
+      // background: #c4d0e8 url(./../img/about/mimoji2.png) center bottom -3rem / 60% no-repeat;
       border-radius: 50%;
-      animation: flip_image 3.5s infinite alternate;
+      // animation: flip_image 3.5s infinite alternate;
     }
   }
   hr {
-    margin: 3.6rem 2rem 0;
+    margin: 2.4rem 2rem 0;
   }
   .about-box {
     display: flex;
@@ -288,11 +288,11 @@
   }
 }
 
-@keyframes flip_image {
-  from {
-    background: #c4d0e8 url(./../img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
-  }
-  to {
-    background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
-  }
-}
+// @keyframes flip_image {
+//   from {
+//     background: #c4d0e8 url(./../img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
+//   }
+//   to {
+//     background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
+//   }
+// }

@@ -69,8 +69,9 @@
         <!-- contents -->
         <div class="contents-group-box">
           <div class="inner">
-            <button type="button" class="btn-open-career" aria-label="작업물 리스트로 이동"><span>WORK</span></button>
+            <button type="button" class="btn-open-career" aria-label="작업물 리스트로 이동"><span>SCROLL</span></button>
             <div class="contents-box">
+              <!-- 
               <div class="round-box">
                 <div class="inner">
                   <div class="round-header">
@@ -114,7 +115,7 @@
                   </div>
                 </div>
               </div>
-
+              -->
               <div class="about-area">
                 <div class="inner">
                   <!-- <h2 class="sub-tit" id="pageTit">About</h2> -->
@@ -178,7 +179,6 @@
                     <hr />
                     <div class="about-box">
                       <div class="detail-wrap">
-                        <h4>WORK EXPERIENCE</h4>
                         <div class="experience-detail">
                           <div>
                             <h5>
@@ -342,6 +342,13 @@
 
         // type affect to header
         typeEffect(h1, txtSpeed);
+
+        // to order for experience
+        let orderDiv = $('.experience-detail > div');
+        let orderLength = orderDiv.length;
+        for (i = 0; i < orderLength; i++) {
+          orderDiv.eq(i).css({ order: i });
+        }
       });
     </script>
   </body>
