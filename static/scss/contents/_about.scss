@@ -6,6 +6,7 @@
   }
 }
 .about-wrap {
+  color: $white-color;
   .greeting {
     display: flex;
     flex-direction: column;
@@ -41,34 +42,40 @@
             flex-direction: column;
             gap: 1.6rem;
             img {
-              width: 6rem;
-              height: 6rem;
+              width: 5.4rem;
+              height: 5.4rem;
+              &.in-normal {
+                display: none;
+              }
+              &.in-dark {
+                display: block;
+              }
             }
           }
         }
       }
       hr {
-        margin: 3.6rem 0;
+        margin: 2.4rem 0;
       }
     }
     .portrait-wrap {
       flex-shrink: 0;
       width: 36rem;
       height: 36rem;
-      background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 60% no-repeat;
-      border: 1px solid #ccc;
+      background: #c4d0e8 url(./../img/about/mimoji2.png) right 2rem center / 95% no-repeat;
+      // background: #c4d0e8 url(./../img/about/mimoji2.png) center bottom -3rem / 60% no-repeat;
       border-radius: 50%;
-      animation: flip_image 3.5s infinite alternate;
+      // animation: flip_image 3.5s infinite alternate;
     }
   }
   hr {
-    margin: 3.6rem 2rem 0;
+    margin: 2.4rem 2rem 0;
   }
   .about-box {
     display: flex;
     flex-direction: column;
     gap: 14rem;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0;
     justify-content: flex-start;
     .detail-wrap {
       display: flex;
@@ -85,13 +92,14 @@
       flex: 1;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, 6rem);
+      grid-template-rows: repeat(1, 1fr);
       gap: 4rem 6rem;
       h5 {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         margin-bottom: 0.6rem;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         .date {
           font-size: 1.4rem;
           font-weight: normal;
@@ -99,7 +107,7 @@
         }
       }
       p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
     }
   }
@@ -111,9 +119,6 @@
 @media only screen and (max-width: 625px) {
   .about-wrap {
     .about-box {
-      &.ty-2 {
-        flex-direction: column;
-      }
       .detail-wrap {
         flex-direction: column;
       }
@@ -147,6 +152,13 @@
         }
       }
     }
+    .about-box {
+      .experience-detail {
+        h5 {
+          flex-direction: row;
+        }
+      }
+    }
   }
 }
 @media only screen and (min-width: 750px) {
@@ -171,25 +183,29 @@
     }
   }
   .about-wrap {
+    color: $black-color;
     .greeting {
       padding: 4rem 18rem;
       .summary {
         .detail-wrap {
           .skills-wrap {
             grid-template-columns: repeat(5, 1fr);
+            .skills-box {
+              img {
+                &.in-normal {
+                  display: block;
+                }
+                &.in-dark {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }
     }
     .about-box {
       padding: 4rem 18rem;
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
     }
     hr {
       margin: 3.6rem 18rem 0;
@@ -218,29 +234,9 @@
           }
         }
       }
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
     }
     hr {
       margin: 3.6rem 24rem 0;
-    }
-  }
-}
-@media only screen and (min-width: 1300px) {
-  .about-wrap {
-    .about-box {
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
     }
   }
 }
@@ -259,8 +255,15 @@
             gap: 2rem;
           }
         }
+        p {
+          font-size: 1.8rem;
+        }
       }
     }
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .about-wrap {
     .about-box {
       .experience-detail {
         grid-template-columns: repeat(2, 1fr);
@@ -268,20 +271,6 @@
     }
   }
 }
-@media only screen and (min-width: 1600px) {
-  .about-wrap {
-    .about-box {
-      .experience-detail {
-        &.ty-2 {
-          grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: repeat(2, 6rem);
-          gap: 4rem 2rem;
-        }
-      }
-    }
-  }
-}
-
 @media only screen and (min-width: 1750px) {
   .about-wrap {
     .greeting {
@@ -299,11 +288,11 @@
   }
 }
 
-@keyframes flip_image {
-  from {
-    background: #c4d0e8 url(./../img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
-  }
-  to {
-    background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
-  }
-}
+// @keyframes flip_image {
+//   from {
+//     background: #c4d0e8 url(./../img/about/mimoji_flip.png) center bottom -3rem / 70% no-repeat;
+//   }
+//   to {
+//     background: #c4d0e8 url(./../img/about/mimoji.png) center bottom -3rem / 70% no-repeat;
+//   }
+// }

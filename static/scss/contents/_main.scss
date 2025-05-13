@@ -1,5 +1,21 @@
 @use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
 /* 메인 */
+@keyframes portrait {
+  0% {
+    background-image: url(./../img/main/portrait_2.png);
+  }
+  10% {
+    background-image: url(./../img/main/portrait_1.png);
+  }
+  70% {
+    background-image: url(./../img/main/portrait_1.png);
+  }
+  100% {
+    background-image: url(./../img/main/portrait_2.png);
+  }
+}
 .main {
   .header {
     &.fixed {
@@ -34,19 +50,88 @@
       position: relative;
       width: 100%;
       height: -vh(100);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-color: $black-color;
       overflow: hidden;
-      background-image: url(./../img/main/background_2.jpg);
-      &::after {
-        content: '';
+      cursor: none;
+      .portrait {
         position: absolute;
-        left: 0;
+        width: 100%;
+        height: 100%;
+        &::before {
+          z-index: 0;
+          content: '';
+          position: absolute;
+          right: 3.6rem;
+          bottom: 10rem;
+          width: 35rem;
+          height: 35rem;
+          background-color: transparent;
+          background-image: url(./../img/main/portrait_1.png);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          animation: portrait 2s infinite;
+        }
+      }
+      /*
+      .portrait_explain {
+        // 글자 숨기고 싶으면 
+        z-index: 1; 
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        font-size: 12rem;
+        letter-spacing: -0.04em;
+        transform: translate(-50%, -50%);
+        display: block;
+        color: #000000;
+        font-family: 'Noto Serif KR', serif;
+      }
+      */
+      .portrait_explain {
+        z-index: -1;
+        position: absolute;
+        top: 40%;
+        right: 10rem;
+        transform: translateY(-50%);
+        width: 30rem;
+        height: 30rem;
+        padding: 8rem 0 0 3.2rem;
+        background-color: $black-color;
+        border-radius: 50%;
+        border: 1px solid $white-color;
+        color: $white-color;
+        font-size: 1.8rem;
+        h2 {
+          font-size: 1.8rem;
+          font-weight: normal;
+        }
+        .depth2 {
+          padding-left: 2rem;
+        }
+
+        .cBlue {
+          color: #368cd6;
+        }
+        .cSblue {
+          color: #68cdfe;
+        }
+        .cOrange {
+          color: #ce834a;
+        }
+      }
+      .ball {
+        display: none;
+        background-color: $white-color;
+        width: 100rem;
+        height: 100rem;
+        border-radius: 50%;
+        pointer-events: none;
+        position: absolute;
         top: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 180, 255, 0.1);
+        left: 0;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
       }
       .mobile-img {
         position: relative;
@@ -252,6 +337,7 @@
           height: 34.6rem;
           display: block;
           transition: 0.3s ease-out transform;
+          cursor: default;
           &::before {
             content: '';
             display: block;
@@ -431,6 +517,38 @@
     }
   }
 }
+.previousText {
+  display: none;
+  position: absolute;
+  width: 50%;
+  top: calc(50% - 6.4rem);
+  left: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  line-height: 1;
+  color: #000;
+}
+.cloneText {
+  padding-left: 4rem;
+}
+@keyframes blink {
+  0% {
+    background-color: #000;
+  }
+  49% {
+    background-color: #000;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+
 /* ==========================================================================
 	Media Queries for Responsive Design. (미디어 쿼리 분기점)
 ========================================================================== */
@@ -754,7 +872,25 @@
 @media only screen and (min-width: 1500px) {
   .main {
     .visual-box {
+      .previousText {
+        display: block;
+      }
       .visual-cell {
+        .portrait {
+          &::before {
+            right: 8rem;
+            width: 65rem;
+            height: 65rem;
+          }
+        }
+        .ball {
+          display: block;
+        }
+        .portrait_explain {
+          top: 20%;
+          right: 45rem;
+          transform: translateY(-50%);
+        }
         .txt_wrap {
           h2 {
             font-size: 12rem;

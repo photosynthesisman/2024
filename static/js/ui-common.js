@@ -187,7 +187,7 @@ function commonUI() {
   //   });
   // });
 
-  menuPop();
+  // menuPop();
   scrollTop();
   // commonDetailPop();
 }
