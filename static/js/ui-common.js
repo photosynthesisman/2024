@@ -74,7 +74,7 @@ function commonUI() {
     const popScrollBtn = $('.pop-full .scroll-top');
     const wrapper = document.querySelector('#container');
     const btn = scrollBtn.children();
-
+    const footer = document.getElementById('footer');
     scrollBtn.hide();
     popScrollBtn.hide();
 
@@ -87,6 +87,11 @@ function commonUI() {
     scrollArea.scroll(function () {
       if ($(this).scrollTop() > 100) {
         scrollBtn.fadeIn();
+        if (scrollBtn[0].getBoundingClientRect().top > footer.getBoundingClientRect().top) {
+          scrollBtn.addClass('inFooter');
+        } else {
+          scrollBtn.removeClass('inFooter');
+        }
       } else if (scrollArea.scrollTop() <= 0) {
         // 스크롤 0 일때 닫기
         mainTitle();
